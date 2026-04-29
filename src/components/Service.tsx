@@ -3,18 +3,18 @@ import Card from "@/components/Card";
 const service = [
     {
         emoji: "🎯",
-        header: "Targeted Insights",
+        header: "Gerichte inzichten",
         body: "Based on proven frameworks for organisational development",
     },
     {
         emoji: "📊",
-        header: "Instant Results",
-        body: "Your score and recommendations delivered straight to your inbox",
+        header: "Directe resultaten",
+        body: "Uw score en aanbevelingenrechtstreeks in uw inbox",
     },
     {
         emoji: "🔒",
-        header: "Data Security",
-        body: "All data is securely stored and processed within the EU",
+        header: "Gegevensbeveiliging",
+        body: "Alle gegevens worden veilig opgeslagen en verwerkt binnen de EU",
     },
 ];
 
@@ -23,13 +23,13 @@ export default function Service() {
         <div className="">
             <div className="flex items-center mt-7 justify-between">
                 {service.map((service) => (
-                    <div key={service.header} className="flex gap-4">
+                    <div key={service.header} className="flex w-[30%]  gap-4">
                         <div className="bg-[#FFF0F6] flex items-center text-lg justify-center rounded-md w-16 h-12">
                             {service.emoji}
                         </div>
                         <div className="">
                             <h1 className="text-[#1B1E4B] font-bold text-lg">{service.header}</h1>
-                            <p className="text-[#475569] w-[70%] text-base">{service.body}</p>
+                            <p className="text-[#475569]   text-sm">{service.body}</p>
                         </div>
                     </div>
                 ))}

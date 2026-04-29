@@ -1,0 +1,307 @@
+// type Question = {
+//     id: string;
+//     question: string;
+//     bullets?: string[]; // optional
+//     answer1: string;
+//     answer2: string;
+// };
+
+// type Category = {
+//     name: string;
+//     questions: Question[];
+// };
+
+// export const quizData: Record<string, Category> = {
+//     BELEID: {
+//         name: "BELEID",
+//         questions: [
+//             {
+//                 id: "b1",
+//                 question:
+//                     "Zijn de uitgangspunten voor het inrichten en uitvoeren van contractmanagement vastgelegd?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "b2",
+//                 question:
+//                     "Is deze vastlegging een duidelijk herkenbaar afgebakend voor contractmanagement of zijn uitgangspunten in één of meerdere andere beleidsstukken opgenomen?",
+//                 answer1: "Afzonderlijk contractma bel herkenbaar nagement eid  ",
+//                 answer2: "Onderdeel van aangrenzend ander beleid",
+//             },
+//             {
+//                 id: "b3",
+//                 question: "Bevat het beleid alle volgende elementen?",
+//                 bullets: [
+//                     "Duidelijke afbakening van welke contracten onder de beleidsregels vallen",
+//                     "Definitie van contractmanagement",
+//                     "Hoofdlijnen van het contractmanagementproces (minimaal contractcreatie – contractuitvoering)",
+//                     "Opsomming en definitie van de rollen die in het proces ontstaan",
+//                     "Verdeling van de verantwoordelijkheden in de hoofdlijnen van het proces over de rollen (bijvoorbeeld in de vorm van een RASCI of een RACI)",
+//                 ],
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "b4",
+//                 question: "Bevat het beleid alle volgende elementen?",
+//                 bullets: [
+//                     "Aanwijzingen voor waar de rol van proceseigenaar belegd moet worden in de organisatie  ",
+//                     "Duidelijk afbakening van de start en het einde van contractmanagement in de levenscyclus van een contract  ",
+//                     "Van toepassing zijnde, eventueel gestandaardiseerde, (geautomatiseerde) systemen en templates   ",
+//                     "Systematiek voor het bepalen van de contractmanagementaanpak (inhoud en tijd) per contract  ",
+//                 ],
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "b5",
+//                 question: "Bevat het beleid alle volgende elementen?  ",
+//                 bullets: [
+//                     "Systematiek voor het aanwijzen van een contracteigenaar",
+//                     "Doel van contractmanagement en visie op hoe het doel gerealiseerd wordt",
+//                     "Van toepassing zijnde, eventueel gestandaardiseerde, (geautomatiseerde) systemen en templates",
+//                     "Koppeling met bovenliggend en aangrenzend beleid",
+//                     "Concreet meetbare punten omsucces van het proces vast te stellenen wijze van meten (KPI’s / PI’s /PPI’s en overig)",
+//                     "Koppeling tussen rollen en functies",
+//                     "Aanwijzingen voor de wenselijkheidvan het al dan niet combineren van meedere rollen in 1 functie of splitsing van rollen over functies",
+//                 ],
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "b6",
+//                 question: "Wordt het beleid periodiek geëvalueerd enbijgesteld?",
+//                 answer1: "✓ volgens vast verbeterproces",
+//                 answer2: "✗ Nee",
+//             },
+//         ],
+//     },
+
+//     PROCES: {
+//         name: "PROCES",
+//         questions: [
+//             {
+//                 id: "p1",
+//                 question:
+//                     "Zijn er processen uitgewerkt voor de manier waarop contractmanagement wordt uitgevoerd?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p2",
+//                 question:
+//                     "Zijn deze processen voor de eigen afdeling of is er een overkoepelend proces voor het bedrijfsonderdeel of de organisatie waar het proces deel van uitmaakt?",
+//                 answer1: "drijfsonderdeel/organisatie",
+//                 answer2: "Afdeling",
+//             },
+//             {
+//                 id: "p2.1",
+//                 question: "Is de rol van proceseigenaar duidelijk belegd binnen de afdeling?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p3",
+//                 question:
+//                     "Is er in het proces systematiek verwerkt voor verschillen in contractmanagementaanpak voor verschillende type contracten",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p3.1",
+//                 question: "Is de rol van proceseigenaar duidelijk belegd binnen de organisatie?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p4",
+//                 question: "Is de rol van proceseigenaar duidelijk belegd binnen de organisatie?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p5",
+//                 question:
+//                     "Wordt het proces gemeten? Bijvoorbeeld door gemaakte uren, gebruikte systemen, uitvoering volgens proces en gerealiseerd effect",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p6",
+//                 question: "Worden proces en procesdocumenten/ werkinstructies geevalueerd?",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "p7",
+//                 question:
+//                     "Wordt het proces op basis van de metingen geevalueerd en bijgestuurd + icm andere processen",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//         ],
+//     },
+
+//     MENS: {
+//         name: "MENS",
+//         questions: [
+//             {
+//                 id: "m1",
+//                 question:
+//                     "Zijn er specifieke functionarissen verantwoordelijk voor contractmanagement (als functie of deel van hun functie)?",
+//                 bullets: ["Bijvoorbeeld cm, clm, inkoper, verkoper"],
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "m2",
+//                 question:
+//                     "Is er vanuit de lijnorganisatie een functiebeschrijving waarinde contractmanagemtactviteit en voor deze functionarissen zijnbeschreven (meestal functiebeschrijving contractmanager)",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "m3",
+//                 question: "Is er vanuit het proces een rolbeschrijving contractmanager",
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "m4",
+//                 question:
+//                     "Is er vanuit het proces een rolbeschrijving van aan contractmanager grenzende rollen?",
+//                 bullets: ["Bijvoorbeeld CE en RVM"],
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "m5",
+//                 question:
+//                     "Zijn er voor de CM persoonlijke beoordelingscriteria/doelstellingen opgesteld gebaseerd op de functiebeschrijving en de rolbeschrijving en is het opleidingspad/certificeringspad duidelijk gedefinieerd?",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "m6",
+//                 question:
+//                     "Worden functiebeschrijving, rolbeschrijving en persoonlijke doelstellingen/beoordelingscriteria periodiek geëvalueerd en bijgesteld",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//         ],
+//     },
+
+//     SYSTEEM: {
+//         name: "SYSTEEM",
+//         questions: [
+//             {
+//                 id: "s1",
+//                 question:
+//                     "Is er een geautomatiseerd systeem voor het vastleggen van contracten en contractgegevens",
+//                 bullets: ["ook meervoud en andere systemen"],
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "s1.1",
+//                 question:
+//                     "Is er een gecentraliseerde plaats gedefinieerd voor opslag van contracten en contractgegevens?(bijvoorbeeld SharePoint)",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "s2",
+//                 question:
+//                     "Faciliteert dit systeem een workflow voor het contractmanagement in de uitvoeringsfase",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "s3",
+//                 question: "Is dit systeem (waar noodzakelijk) geïntegreerd met andere systemen",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "s4",
+//                 question:
+//                     "Maakt dit systeem gebruik van technieken zoals AI en RPA om de CM werkzaamheden te ondersteunen",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//         ],
+//     },
+
+//     CONTRACTPORTFOLIO: {
+//         name: "CONTRACTPORTFOLIO",
+//         questions: [
+//             {
+//                 id: "cp1",
+//                 question:
+//                     "Is er (centraal of over meerdere locaties verspreid) overzicht over alle contracten waarop contractmanagement moet worden toegepast?",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "cp2",
+//                 question:
+//                     "Zijn van alle contracten in dit overzicht/deze overzichten de volgende gegevens bekend:",
+//                 bullets: [
+//                     "naam wederpartij",
+//                     "contractwaarde in geld",
+//                     "begindatum",
+//                     "einddatum",
+//                     "verlengdatum",
+//                 ],
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "cp3",
+//                 question: "Zijn van alle contracten de volgende gegevens bekend:",
+//                 bullets: [
+//                     "invulling rollen (aan beide zijden van het contract) contracteigenaar, contractmanager en realisatie",
+//                     "en verficatiemanager",
+//                     "van toepassing zijn contractmanagementscenario",
+//                 ],
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "cp4",
+//                 question:
+//                     "Is er voor alle contracten inzicht in de voor contractmanagementdoeleinden relevante informatie per contract. Denk hierbij aan een contractrisicoprofiel, notulen van vergaderingen, rapportages, etc",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "cp5",
+//                 question:
+//                     "Wordt er informatie verzameld over de uitvoering van het cm proces (zijn de werkzaamheden conform plan uitgevoerd en heeft dit tot het gewenste resultaat geleid)",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//             {
+//                 id: "cp6",
+//                 question:
+//                     "Wordt de te verzamelen data geevalueerd en waar nodig bijgesteld in relatie tot de organisatiedoels tellingen",
+
+//                 answer1: "✓ Ja",
+//                 answer2: "✗ Nee",
+//             },
+//         ],
+//     },
+// };
