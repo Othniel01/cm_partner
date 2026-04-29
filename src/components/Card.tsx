@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Field, FieldDescription, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Lock } from "lucide-react";
@@ -24,9 +25,12 @@ export default function Card() {
                         type="email"
                         placeholder="jij@organisatie.com"
                     />
-                    <button className="text-sm flex items-center hover:opacity-90 active:bg-[#a10352] cursor-pointer  font-semibold text-white gap-1 bg-secondary h-11.75 rounded-md w-full justify-center">
-                        Doe de toets <ArrowRight className="w-4 text-white h-4" />
-                    </button>
+
+                    <Link href="">
+                        <button className="text-sm flex items-center hover:opacity-90 active:bg-[#a10352] cursor-pointer  font-semibold text-white gap-1 bg-secondary h-11.75 rounded-md w-full justify-center">
+                            Doe de toets <ArrowRight className="w-4 text-white h-4" />
+                        </button>
+                    </Link>
 
                     <FieldDescription className="flex gap-2 items-center">
                         <Lock className="w-4  h-4" />
